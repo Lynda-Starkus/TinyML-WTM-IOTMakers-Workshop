@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>TinyML - GDG tutorial</title>
+</head>
+<body>
+    <center>
+        <h1>TFlite gesture recognition</h1>
+
+        <p class="desc">Classify and recognize the following gestures: </p>
+
+        <div class="image-holder">
+            <img src="../static/A.jpg" width="15%" class = "images"/>
+
+            <img src="../static/B.jpg" width="15%" class="images"/>
+
+            <img src="../static/C.jpg" width="15%"/>
+        </div>
+
+    
+        <button id="button-1" class="submit_button" onClick="myFunction()">Use live webcam</button>
+
+        <div id="realtimeVideo" style="display: none;">
+            <img id="videoTab" src="" width="30%" />
+        </div>
+
+    </center>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("realtimeVideo");
+        var y = document.getElementById("button-1");
+        var z = document.getElementById("videoTab");
+        if (x.style.display === "none") 
+        {
+            x.style.display = "block";
+            y.innerHTML = "Stop the Real Time Window!";
+            z.src = "{{ url_for('video') }}";
+        }
+        else
+        {
+            x.style.display = "none";
+            y.innerHTML = "Try in Real Time!";
+            z.src = "";
+        }
+    }
+</script>
+
+    
+</body>
+</html>
