@@ -1,6 +1,6 @@
 ### TinyML : TensorFlow Lite Workshop - Multi-Label Classification for Embedded Devices
 
-
+![](/banner.png)
 
 #### Introduction : 
 
